@@ -17,7 +17,7 @@ class SpotifyAPITests(TestCase):
 
     def test_current_song_view(self):
         response = self.client.get('/spotify/current-song')
-        # Assuming it returns 204 if no song is playing or 200 with data
+        
         self.assertIn(response.status_code, [200, 204])
 
     def test_play_pause_skip_endpoints(self):
